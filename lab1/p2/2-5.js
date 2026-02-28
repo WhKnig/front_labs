@@ -11,7 +11,6 @@ btn_check4.addEventListener("click", () => {
         return;
     }
 
-    // Очищаем строку от пробелов и приводим к одному регистру
     const cleaned = trimmed.toLowerCase().replace(/\s/g, "");
     const reversed = cleaned.split("").reverse().join("");
 

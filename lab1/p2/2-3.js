@@ -3,11 +3,6 @@ const btn_up = document.getElementById("btn_up");
 const inpt_step = document.getElementById("inpt_value_for_chenge");
 const inpt_num = document.getElementById("num");
 
-/**
- * Объект Counter с требуемыми методами.
- * Логика обновлена для более "нормальной" работы: 
- * состояние хранится в объекте и синхронизируется с полем ввода.
- */
 const Counter = {
     count: 0,
     add(value) {
@@ -45,5 +40,4 @@ btn_down.addEventListener("click", () => {
     Counter.sub(getStep());
 });
 
-// Инициализация при загрузке, чтобы подхватить дефолтные значения (если есть)
 syncFromInput();

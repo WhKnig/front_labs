@@ -4,12 +4,16 @@ function deepCopy(obj) {
     if (obj === null || typeof obj !== "object") {
         return obj;
     }
-    const copy = Array.isArray(obj) ? [] : {};
-    for (let key in obj) {
-        if (Object.prototype.hasOwnProperty.call(obj, key)) {
-            copy[key] = deepCopy(obj[key]);
-        }
+
+    if (Array.isArray(obj)) {
+        return obj.map(item => deepCopy(item));
     }
+
+    const copy = {};
+    for (const key of Object.keys(obj)) {
+        copy[key] = deepCopy(obj[key]);
+    }
+
     return copy;
 }
 

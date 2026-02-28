@@ -4,7 +4,6 @@ btn3_1.addEventListener("click", () => {
     const value = prompt("Введите список натуральных чисел через запятую или пробел:");
     if (value === null) return;
 
-    // Разделяем по запятым или пробелам
     const nums = value.trim().split(/[\s,]+/)
         .map(n => parseInt(n))
         .filter(n => !isNaN(n));
