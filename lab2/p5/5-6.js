@@ -1,5 +1,5 @@
 const originalReverse = Array.prototype.reverse;
-Array.prototype.reverse = function() {
+Array.prototype.reverse = function () {
     const currentElements = [...this];
     for (let item of currentElements) {
         this.push(item);
