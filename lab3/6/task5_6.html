@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 5 & 6 - Калькулятор</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #eff6ff;">
+  <div style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 25px rgba(0,0,0,0.1); width: 100%; max-width: 400px; text-align: center;">
+    <h1>Задание 5 & 6: Калькулятор</h1>
+    <div id="display">0</div>
+    <div class="calculator">
+      <button class="calc-btn clear" data-val="C">C</button>
+      <button class="calc-btn operator" data-val="(">(</button>
+      <button class="calc-btn operator" data-val=")">)</button>
+      <button class="calc-btn operator" data-val=" ">␣</button>
+      
+      <button class="calc-btn" data-val="7">7</button>
+      <button class="calc-btn" data-val="8">8</button>
+      <button class="calc-btn" data-val="9">9</button>
+      <button class="calc-btn operator" data-val="/">/</button>
+      
+      <button class="calc-btn" data-val="4">4</button>
+      <button class="calc-btn" data-val="5">5</button>
+      <button class="calc-btn" data-val="6">6</button>
+      <button class="calc-btn operator" data-val="*">*</button>
+      
+      <button class="calc-btn" data-val="1">1</button>
+      <button class="calc-btn" data-val="2">2</button>
+      <button class="calc-btn" data-val="3">3</button>
+      <button class="calc-btn operator" data-val="-">-</button>
+      
+      <button class="calc-btn" style="grid-column: span 2;" data-val="0">0</button>
+      <button class="calc-btn" data-val=".">.</button>
+      <button class="calc-btn operator" data-val="+">+</button>
+      
+      <button class="calc-btn equals" style="grid-column: span 4; margin-top: 5px;" data-val="=">=</button>
+    </div>
+    <p style="margin-top: 50px;"><a href="index.html">← Вернуться к списку</a></p>
+  </div>
+  <script src="task5_6.js"></script>
+</body>
+</html>

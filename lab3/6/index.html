@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задания 6</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #fdf2f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .launcher {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1a1a1a;
+      margin-bottom: 2.5rem;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .menu-item {
+      display: block;
+      padding: 1rem 1.5rem;
+      background: #4869ec;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .menu-item:hover {
+      background: #4869ec;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(72, 200, 236, 0.4);
+    }
+
+    .menu-item span {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: normal;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="launcher">
+    <h1>Лабораторная №3</h1>
+    <div class="menu">
+      <a href="task1.html" class="menu-item">Задание 1<span>Базовая верстка HTML</span></a>
+      <a href="task2.html" class="menu-item">Задание 2<span>Защита страницы (DOM API)</span></a>
+      <a href="task3_4.html" class="menu-item">Задание 3 & 4<span>Кликер со статистикой (CPS)</span></a>
+      <a href="task5_6.html" class="menu-item">Задание 5 & 6<span>Калькулятор</span></a>
+    </div>
+  </div>
+</body>
+
+</html>
