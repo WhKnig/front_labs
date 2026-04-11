@@ -1,0 +1,20 @@
+{
+  "name": "8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass --watch src/.:.",
+    "sass:build": "sass src/layout.scss layout.css && sass src/numbers.scss numbers.css",
+    "less:watch": "less-watch-compiler src . layout.less",
+    "less:build": "lessc src/numbers.less numbers.css && lessc src/layout.less layout.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "less": "^4.6.4",
+    "sass": "^1.99.0"
+  }
+}
