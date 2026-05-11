@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios GeoIP Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        #output { background: #eef; padding: 15px; border-radius: 5px; white-space: pre-wrap; word-break: break-all; border: 1px solid #ccd; }
+    </style>
+</head>
+<body>
+    <h1>Axios Browser Test (GeoIP API)</h1>
+    <p>Этот API поддерживает CORS, поэтому запрос должен пройти успешно.</p>
+    <button id="runBtn">Get My IP Info</button>
+    <div id="output">Click the button...</div>
+
+    <script>
+        const btn = document.getElementById('runBtn');
+        const output = document.getElementById('output');
+
+        btn.addEventListener('click', () => {
+            output.textContent = 'Requesting GeoIP data...';
+            
+            axios.get('https://json.geoiplookup.io/')
+                .then(response => {
+                    output.textContent = 'SUCCESS!\n\n' + JSON.stringify(response.data, null, 2);
+                    output.style.color = 'green';
+                })
+                .catch(error => {
+                    output.textContent = 'ERROR: ' + error.message;
+                    output.style.color = 'red';
+                    console.error(error);
+                });
+        });
+    </script>
+</body>
+</html>

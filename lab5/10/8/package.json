@@ -1,0 +1,13 @@
+{
+  "name": "env-config-task",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:localhost": "vite --mode localhost",
+    "dev:dev": "vite --mode development",
+    "dev:prod": "vite --mode production"
+  },
+  "dependencies": {
+    "vite": "^6.0.0"
+  }
+}

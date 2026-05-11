@@ -1,0 +1,9 @@
+{
+  "name": "postman-simulation",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.15.2",
+    "qs": "^6.15.1"
+  }
+}

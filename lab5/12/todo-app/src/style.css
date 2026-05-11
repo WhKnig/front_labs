@@ -1,0 +1,8 @@
+/* Cleaned up default styles */
+body {
+  margin: 0;
+}
+
+#app {
+  width: 100%;
+}

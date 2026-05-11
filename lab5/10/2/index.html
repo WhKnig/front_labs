@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios Browser Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        #output { background: #f4f4f4; padding: 15px; border-radius: 5px; white-space: pre-wrap; word-break: break-all; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Axios Browser Test (vk.com)</h1>
+    <button id="runBtn">Run Request</button>
+    <div id="output">Click the button to start...</div>
+
+    <script>
+        const btn = document.getElementById('runBtn');
+        const output = document.getElementById('output');
+
+        btn.addEventListener('click', () => {
+            output.textContent = 'Requesting https://vk.com...';
+            output.className = '';
+
+            axios.get('https://vk.com')
+                .then(response => {
+                    output.textContent = 'Success!\nStatus: ' + response.status + '\nData starting with: ' + response.data.substring(0, 200);
+                    output.className = 'success';
+                })
+                .catch(error => {
+                    output.textContent = 'ERROR!\n';
+                    output.className = 'error';
+                    if (error.response) {
+                        output.textContent += 'Status: ' + error.response.status;
+                    } else if (error.request) {
+                        output.textContent += 'Request was sent but no response. This is likely a CORS error (check DevTools Console).';
+                    } else {
+                        output.textContent += 'Message: ' + error.message;
+                    }
+                    console.error(error);
+                });
+        });
+    </script>
+</body>
+</html>
